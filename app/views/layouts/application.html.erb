@@ -1,0 +1,22 @@
+<!-- 各ページに共通の部分（ヘッダーやフッター）はここで設定 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CARAVAN</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <!-- Railsでは、ビューを表示する際、
+まずapplication.html.erbを読み、
+次に、呼び出されたアクションに対応するビューファイルを、
+application.html.erbのyieldに埋め込む、
+という流れになっています。 -->
+  </body>
+</html>
